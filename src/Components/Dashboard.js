@@ -14,7 +14,6 @@ state = { cardName: "Inizio" };
     console.log("Sono aggiornato");
   }
   render() {
-    console.log("Render");
     return (
       <div className="dashboard">
         <Bucket title={this.props.title} idDashboard={this.props.idDashboard}>

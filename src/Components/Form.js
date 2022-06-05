@@ -35,15 +35,15 @@ export default class Form extends Component {
 	}
 
    render() {
-      const {submitted,title,} = this.state
+      const {submitted,title,onChange} = this.state
       return (
          <>
-         {!this.state.submitted ?
+         {!submitted ?
          <form onSubmit={this.onSubmitHandler}>
             <InputText
             name ={"title"}
             id={"title"}
-            value = {this.state.title}
+            value = {title}
             style = {{padding:50}}
             onChange={this.onChangeHandler}/>
             <Button type ={"submit"} >Submit</Button>
