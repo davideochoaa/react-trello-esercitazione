@@ -2,11 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import DeleteCardButton from "./Components/DeleteCardButton"
 
-export default class PersonRemove extends React.Component {
+export default class CardRemove extends React.Component {
    constructor(props) {
       super(props)
-      var id = this.props.idDashboard;
-      var card = this.props.idCard;
    }
 
    state = {
@@ -17,7 +15,8 @@ export default class PersonRemove extends React.Component {
    handleChange = event => {
       this.setState({
          idDashboard: this.props.idDashboard,
-         idCard: this.props.idCard
+         idCard: this.props.idCard,
+         text: this.props.text
       });
    }
 
@@ -27,8 +26,7 @@ export default class PersonRemove extends React.Component {
 
       axios.delete(`http://localhost:3333/api/${this.props.idDashboard}/${this.props.idCard}`, { headers: { 'Authorization': `Bearer ${bearerToken}` } })
          .then(res => {
-            console.log("Succesful Delete",res);
-            console.log(res.data);
+            console.log(`Succesful Delete, bye bye...${this.props.text} [Card]`,res);
          })
    }
 

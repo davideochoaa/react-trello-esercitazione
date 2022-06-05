@@ -61,7 +61,7 @@ export default function FormDialog(id) {
     try {
       e.preventDefault();
       axios.post(`http://localhost:3333/api/${idDashboard}`, { text: gino }, { headers: { 'Authorization': `Bearer ${bearerToken}` } })
-      console.log("Carta Creata Correttamente");
+      console.log(`Carta Creata Correttamente, il suo nome è : ${gino}`);
     } catch (err) {
       console.log(err);
     }

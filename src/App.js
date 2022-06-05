@@ -45,7 +45,7 @@ class App extends React.Component {
           <Dashboard title={dashboard.name} key={dashboard.id} idDashboard={dashboard.id}>
             {
             dashboard.contents.map(contents => 
-            <Card idCard = {contents.id} idDashboard ={dashboard.id} key={contents.id}>{contents.text}
+            <Card idCard = {contents.id} idDashboard ={dashboard.id} key={contents.id} text= {contents.text}>{contents.text}
             </Card>
             )}
           </Dashboard>
