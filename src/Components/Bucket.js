@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Card from "./Card";
 import Button from "../Button";
-import Buttons from "./Buttons/index.js"
+import Buttons from "./DropDownButton/index.js"
 
 class Bucket extends Component {
   render() {
