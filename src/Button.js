@@ -69,7 +69,7 @@ export default function FormDialog(id) {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen} className="form-button-add-card">
         Add Card
       </Button>
       <Dialog open={open} onClose={handleClose}>

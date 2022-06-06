@@ -26,7 +26,7 @@ export default class CardRemove extends React.Component {
 
       axios.delete(`http://localhost:3333/api/${this.props.idDashboard}/${this.props.idCard}`, { headers: { 'Authorization': `Bearer ${bearerToken}` } })
          .then(res => {
-            console.log(`Succesful Delete, bye bye...${this.props.text} [Card]`,res);
+            console.log(`Succesful Delete [Card] ${this.props.text} [Card]`,res);
          })
    }
 

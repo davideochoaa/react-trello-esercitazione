@@ -12,30 +12,29 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = ({
-      dashboard: [],
-      Cards: []
+      dashboard: []
     })
   }
+
+
     componentDidMount() {
+      setTimeout(() => {
       axios.get("http://localhost:3333/api/list"
         , { headers: { 'Authorization': `Bearer ${bearerToken}` }})
         .then(( response ) => {
           const dashboard = response.data;
           const cards = dashboard.components
           console.log(dashboard)
+          console.log(dashboard.name)
           this.setState({
-            dashboard,
-            cards
+            dashboard
           });
 
         }).catch((err)=> {});
       //this.setState({ cardName: "La mia carta" });
       //console.log("Sono montato1");
+    }, 1000)
     };
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
 
     render() {
       return (

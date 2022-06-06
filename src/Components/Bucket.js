@@ -13,7 +13,7 @@ class Bucket extends Component {
         <div className="cards">
           {this.props.children}
         </div>
-        <Button idDashboard={this.props.idDashboard} onClickHandler={() => console.log("add Card")}/>
+        <Button idDashboard={this.props.idDashboard}/>
       </div>
     );
   }
